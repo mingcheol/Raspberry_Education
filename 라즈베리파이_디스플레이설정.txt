@@ -1,4 +1,4 @@
-¡Ø ¶óÁîº£¸®ÆÄÀÌ ÇÑ±Û ¼³Á¤
+â€» ë¼ì¦ˆë² ë¦¬íŒŒì´ í•´ìƒë„ ì„¤ì •
 
 sudo nano /boot/config.txt
 
@@ -10,4 +10,4 @@ hdmi_mode = 35
 
 hdmi_drive = 1
 
-·Î ¹Ù²Ù°í ÀúÀåÇÑ´Ù. ÀçºÎÆÃ
+ë¡œ ë°”ê¾¸ê³  ì €ìž¥í•œë‹¤. ìž¬ë¶€íŒ…
