@@ -1,0 +1,70 @@
+## 네트워크 설정
+
+1. 네트워크 설정 파일을 찾아서 편집
+
+	cd /etc/network/
+
+2. interfaces 수정
+	
+	sudo nano interfaces
+
+3. 다음과 같이 수정한다.
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+ 
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+ 
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+ 
+auto lo
+iface lo inet loopback
+ 
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+ 
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+컨트롤+x 누르고 Y눌러서 저장 후 엔터눌러 종료
+
+4. wap_supplicant.conf 수정
+
+	sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+5. 다음과 같이 수정한다.
+
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+ 
+network={
+        ssid="Xiaomi"
+        psk="12345678"
+        key_mgmt=WPA-PSK
+}
+ 
+network={
+        ssid=""
+        psk=""
+        key_mgmt=WPA-PSK
+}
+
+
+컨트롤+x 누르고 Y눌러서 저장 후 엔터눌러 종료
+
+6. 네트워크 재시작
+
+	sudo service networking reload
+
+	그 다음 sudo reboot 또는 셧다운 메뉴를 통해 라즈베리 재시작
+
+7. ifconfig를 통해 eth0 또는 wlan의 ip주소를 확인한다.
+
+
+
+

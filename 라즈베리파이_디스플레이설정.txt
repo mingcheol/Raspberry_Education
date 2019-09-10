@@ -1,0 +1,13 @@
+※ 라즈베리파이 한글 설정
+
+sudo nano /boot/config.txt
+
+hdmi_force_hotplug = 1
+
+hdmi_group = 2
+
+hdmi_mode = 35
+
+hdmi_drive = 1
+
+로 바꾸고 저장한다. 재부팅

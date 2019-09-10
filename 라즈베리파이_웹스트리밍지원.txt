@@ -1,0 +1,31 @@
+
+
+※ 라즈베리파이 웹-스트리밍 하는 방법
+
+sudo apt-get update
+
+sudo apt-get dist-upgrade
+
+git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
+
+cd ~/RPi_Cam_Web_Interface
+
+sudo ./install.sh
+
+sudo chmod u+x *.sh
+
+sudo raspi-config	카메라 enable 해주기
+
+sudo reboot 0
+
+크롬켜서 url에 라즈베리파이 ip 치고 접속
+
+[라즈베리파이_ip]/http/로 이동
+
+그러면 스트리밍 되는 것 확인가능
+
+혹시 안될경우는 sudo ./start.sh	해서 실행해보기
+
+스트리밍 정지시킬때는
+sudo ./stop.sh		해주기 
+

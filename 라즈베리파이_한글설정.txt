@@ -1,0 +1,20 @@
+※ 라즈베리파이 한글 설정
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get -y install ibus ibus-hangul fonts-unfonts-core
+
+sudo apt-get -y install fcitx-hangul
+
+
+라즈베리파이 configuration 가서
+
+set locale - set timezone - set keyboard - set wifi 설정 -> 재부팅
+
+시스템도구 - Fcitx 실행
+
+오른쪽 상단에 키보드 눌러서 한글로 바꾸면 태극문양이 나온다 그리고 재부팅
+
+
